@@ -3,7 +3,7 @@
 I've recently done a tech challenge which had a suspicious piece of code in it.
 Shortly after finding this I asked them about it and had my question removed and I was blocked by the dev that was managing it.
 It became clear that it was a scam and I had to go a bit deeper into what was happening and what they were trying to do.
-You can find the (script)[./script.js] and run it through Docker (for safety) with:
+You can find the [script](./script.js) and run it through Docker (for safety) with:
 ```
 $ docker build -t <IMAGE_NAME> .
 $ docker run --rm -it --name <CONTAINER_NAME> --cap-drop=ALL <IMAGE_NAME>
@@ -13,17 +13,24 @@ I've also left how it was hidden on the file (here)[./hidden-script.js] so you c
 Luckily when I've opened this file the line simply wrapped which allowed me to see it with ease but looking through
 github you can see that the symbols are detected as well.
 
-After running the script on an isolated environment, I've noticed two IPs at the same port that are being used by the script, also here's the (order of requests)[./wireshark-requests.png]:
+After running the script on an isolated environment, I've noticed two IPs at the same port that are being used by the script:
 
 - 216.173.115.200:1244
 - 67.203.7.209:1244
+
+Along with the order of requests:
+
+![](wireshark-requests.png?raw=true)
 
 The first IP seems to be used to fetch some sort of key and the second one actually downloads the actual malicious payload at the home directory and it does in a cunning way to try to avoid the target from noticing it:
 
 - ~/.vscode
 - ~/.npl
 
-Inside .vscode, there's another obfuscated script which seems to be the one that (keeps running)[./processes.png] (there's a `setInterval`) there but I couldn't discern yet what it does specifically. The `.npl` file seems more cryptic as it's a base64 encoded file which after decoding seems to be an executabel binary but I couldn't gather also what it does exactly.
+Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there.
+![](processes.png?raw=true)
+
+The `.npl` file seems more cryptic as it's a base64 encoded file which after decoding seems to be an executabel binary but I couldn't gather also what it does exactly besides tracing the underlying processes calls.
 
 Regardless, after running the script with `strace -f -o trace.log node script.js` within the container I could detect on (trace.log)[./trace.log] the IPs mentioned and the files that it tries to open and I believe which are sent to 67.203.7.209:1244:
 
