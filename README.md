@@ -9,7 +9,7 @@ $ docker build -t <IMAGE_NAME> .
 $ docker run --rm -it --name <CONTAINER_NAME> --cap-drop=ALL <IMAGE_NAME>
 ```
 
-I've also left how it was hidden on the file (here)[./hidden-script.js] so you can also see how they usually do it.
+I've also left how it was hidden on the file [here](./hidden-script.js) so you can also see how they usually do it.
 Luckily when I've opened this file the line simply wrapped which allowed me to see it with ease but looking through
 github you can see that the symbols are detected as well.
 
@@ -24,15 +24,15 @@ Along with the order of requests:
 
 The first IP seems to be used to fetch some sort of key and the second one actually downloads the actual malicious payload at the home directory and it does in a cunning way to try to avoid the target from noticing it:
 
-- ~/.vscode
-- ~/.npl
+- [~/.vscode](./payloads/.vscode)
+- [~/.npl](./payloads/.npl)
 
 Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there.
 ![](processes.png?raw=true)
 
 The `.npl` file seems more cryptic as it's a base64 encoded file which after decoding seems to be an executabel binary but I couldn't gather also what it does exactly besides tracing the underlying processes calls.
 
-Regardless, after running the script with `strace -f -o trace.log node script.js` within the container I could detect on (trace.log)[./trace.log] the IPs mentioned and the files that it tries to open and I believe which are sent to 67.203.7.209:1244:
+Regardless, after running the script with `strace -f -o trace.log node script.js` within the container I could detect on [trace.log](./trace.log) the IPs mentioned and the files that it tries to open and I believe which are sent to 67.203.7.209:1244
 
 ```
 23    openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 21
