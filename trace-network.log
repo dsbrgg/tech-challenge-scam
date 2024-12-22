@@ -1,0 +1,365 @@
+89    socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 21
+89    connect(21, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+89    socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 21
+89    connect(21, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+89    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 21
+89    connect(21, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("216.173.115.200")}, 16) = -1 EINPROGRESS (Operation now in progress)
+89    getsockopt(21, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+89    setsockopt(21, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+89    shutdown(21, SHUT_WR)             = 0
+89    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 21
+89    connect(21, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+89    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 22
+89    connect(22, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+89    getsockopt(21, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+89    setsockopt(21, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+89    getsockopt(22, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+89    setsockopt(22, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+89    shutdown(21, SHUT_WR)             = 0
+89    shutdown(22, SHUT_WR)             = 0
+89    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 21
+89    connect(21, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+89    getsockopt(21, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+89    setsockopt(21, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [22, 23]) = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [24, 25]) = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [26, 27]) = 0
+89    shutdown(21, SHUT_WR)             = 0
+97    getsockname(0, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(0, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 17
+97    bind(17, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+97    getsockname(17, {sa_family=AF_NETLINK, nl_pid=97, nl_groups=00000000}, [12]) = 0
+97    sendto(17, [{nlmsg_len=20, nlmsg_type=RTM_GETLINK, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1734699151, nlmsg_pid=0}, {ifi_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=1432, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_LOOPBACK, ifi_index=if_nametoindex("lo"), ifi_flags=IFF_UP|IFF_LOOPBACK|IFF_RUNNING|IFF_LOWER_UP, ifi_change=0}, [[{nla_len=7, nla_type=IFLA_IFNAME}, "lo"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 0], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 65536], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 524280], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00], [{nla_len=10, nla_type=IFLA_BROADCAST}, 00:00:00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=12, nla_type=IFLA_QDISC}, "noqueue"], [{nla_len=812, nla_type=IFLA_AF_SPEC}, [[{nla_len=140, nla_type=AF_INET}, [{nla_len=136, nla_type=IFLA_INET_CONF}, [[IPV4_DEVCONF_FORWARDING-1]=1, [IPV4_DEVCONF_MC_FORWARDING-1]=0, [IPV4_DEVCONF_PROXY_ARP-1]=0, [IPV4_DEVCONF_ACCEPT_REDIRECTS-1]=1, [IPV4_DEVCONF_SECURE_REDIRECTS-1]=1, [IPV4_DEVCONF_SEND_REDIRECTS-1]=1, [IPV4_DEVCONF_SHARED_MEDIA-1]=1, [IPV4_DEVCONF_RP_FILTER-1]=0, [IPV4_DEVCONF_ACCEPT_SOURCE_ROUTE-1]=1, [IPV4_DEVCONF_BOOTP_RELAY-1]=0, [IPV4_DEVCONF_LOG_MARTIANS-1]=0, [IPV4_DEVCONF_TAG-1]=0, [IPV4_DEVCONF_ARPFILTER-1]=0, [IPV4_DEVCONF_MEDIUM_ID-1]=0, [IPV4_DEVCONF_NOXFRM-1]=1, [IPV4_DEVCONF_NOPOLICY-1]=1, [IPV4_DEVCONF_FORCE_IGMP_VERSION-1]=0, [IPV4_DEVCONF_ARP_ANNOUNCE-1]=0, [IPV4_DEVCONF_ARP_IGNORE-1]=0, [IPV4_DEVCONF_PROMOTE_SECONDARIES-1]=0, [IPV4_DEVCONF_ARP_ACCEPT-1]=0, [IPV4_DEVCONF_ARP_NOTIFY-1]=0, [IPV4_DEVCONF_ACCEPT_LOCAL-1]=0, [IPV4_DEVCONF_SRC_VMARK-1]=0, [IPV4_DEVCONF_PROXY_ARP_PVLAN-1]=0, [IPV4_DEVCONF_ROUTE_LOCALNET-1]=0, [IPV4_DEVCONF_IGMPV2_UNSOLICITED_REPORT_INTERVAL-1]=10000, [IPV4_DEVCONF_IGMPV3_UNSOLICITED_REPORT_INTERVAL-1]=1000, [IPV4_DEVCONF_IGNORE_ROUTES_WITH_LINKDOWN-1]=0, [IPV4_DEVCONF_DROP_UNICAST_IN_L2_MULTICAST-1]=0, [IPV4_DEVCONF_DROP_GRATUITOUS_ARP-1]=0, [IPV4_DEVCONF_BC_FORWARDING-1]=0, ...]]], [{nla_len=668, nla_type=AF_INET6}, [[{nla_len=8, nla_type=IFLA_INET6_FLAGS}, IF_READY], [{nla_len=20, nla_type=IFLA_INET6_CACHEINFO}, {max_reasm_len=65535, tstamp=124376, reachable_time=26825, retrans_time=1000}], [{nla_len=240, nla_type=IFLA_INET6_CONF}, [[DEVCONF_FORWARDING]=0, [DEVCONF_HOPLIMIT]=64, [DEVCONF_MTU6]=65536, [DEVCONF_ACCEPT_RA]=1, [DEVCONF_ACCEPT_REDIRECTS]=1, [DEVCONF_AUTOCONF]=1, [DEVCONF_DAD_TRANSMITS]=1, [DEVCONF_RTR_SOLICITS]=-1, [DEVCONF_RTR_SOLICIT_INTERVAL]=4000, [DEVCONF_RTR_SOLICIT_DELAY]=1000, [DEVCONF_USE_TEMPADDR]=-1, [DEVCONF_TEMP_VALID_LFT]=604800, [DEVCONF_TEMP_PREFERED_LFT]=86400, [DEVCONF_REGEN_MAX_RETRY]=3, [DEVCONF_MAX_DESYNC_FACTOR]=600, [DEVCONF_MAX_ADDRESSES]=16, [DEVCONF_FORCE_MLD_VERSION]=0, [DEVCONF_ACCEPT_RA_DEFRTR]=1, [DEVCONF_ACCEPT_RA_PINFO]=1, [DEVCONF_ACCEPT_RA_RTR_PREF]=1, [DEVCONF_RTR_PROBE_INTERVAL]=60000, [DEVCONF_ACCEPT_RA_RT_INFO_MAX_PLEN]=0, [DEVCONF_PROXY_NDP]=0, [DEVCONF_OPTIMISTIC_DAD]=0, [DEVCONF_ACCEPT_SOURCE_ROUTE]=0, [DEVCONF_MC_FORWARDING]=0, [DEVCONF_DISABLE_IPV6]=0, [DEVCONF_ACCEPT_DAD]=-1, [DEVCONF_FORCE_TLLAO]=0, [DEVCONF_NDISC_NOTIFY]=0, [DEVCONF_MLDV1_UNSOLICITED_REPORT_INTERVAL]=10000, [DEVCONF_MLDV2_UNSOLICITED_REPORT_INTERVAL]=1000, ...]], [{nla_len=308, nla_type=IFLA_INET6_STATS}, [[IPSTATS_MIB_NUM]=38, [IPSTATS_MIB_INPKTS]=0, [IPSTATS_MIB_INOCTETS]=0, [IPSTATS_MIB_INDELIVERS]=0, [IPSTATS_MIB_OUTFORWDATAGRAMS]=0, [IPSTATS_MIB_OUTPKTS]=0, [IPSTATS_MIB_OUTOCTETS]=0, [IPSTATS_MIB_INHDRERRORS]=0, [IPSTATS_MIB_INTOOBIGERRORS]=0, [IPSTATS_MIB_INNOROUTES]=0, [IPSTATS_MIB_INADDRERRORS]=0, [IPSTATS_MIB_INUNKNOWNPROTOS]=0, [IPSTATS_MIB_INTRUNCATEDPKTS]=0, [IPSTATS_MIB_INDISCARDS]=0, [IPSTATS_MIB_OUTDISCARDS]=0, [IPSTATS_MIB_OUTNOROUTES]=0, [IPSTATS_MIB_REASMTIMEOUT]=0, [IPSTATS_MIB_REASMREQDS]=0, [IPSTATS_MIB_REASMOKS]=0, [IPSTATS_MIB_REASMFAILS]=0, [IPSTATS_MIB_FRAGOKS]=0, [IPSTATS_MIB_FRAGFAILS]=0, [IPSTATS_MIB_FRAGCREATES]=0, [IPSTATS_MIB_INMCASTPKTS]=0, [IPSTATS_MIB_OUTMCASTPKTS]=0, [IPSTATS_MIB_INBCASTPKTS]=0, [IPSTATS_MIB_OUTBCASTPKTS]=0, [IPSTATS_MIB_INMCASTOCTETS]=0, [IPSTATS_MIB_OUTMCASTOCTETS]=0, [IPSTATS_MIB_INBCASTOCTETS]=0, [IPSTATS_MIB_OUTBCASTOCTETS]=0, [IPSTATS_MIB_CSUMERRORS]=0, ...]], [{nla_len=60, nla_type=IFLA_INET6_ICMP6STATS}, [[ICMP6_MIB_NUM]=7, [ICMP6_MIB_INMSGS]=0, [ICMP6_MIB_INERRORS]=0, [ICMP6_MIB_OUTMSGS]=0, [ICMP6_MIB_OUTERRORS]=0, [ICMP6_MIB_CSUMERRORS]=0, [6 /* ICMP6_MIB_??? */]=0]], [{nla_len=20, nla_type=IFLA_INET6_TOKEN}, inet_pton(AF_INET6, "::")], [{nla_len=5, nla_type=IFLA_INET6_ADDR_GEN_MODE}, IN6_ADDR_GEN_MODE_EUI64]]]]], [{nla_len=36, nla_type=IFLA_MAP}, {mem_start=0, mem_end=0, base_addr=0, irq=0, dma=0, port=0}], ...]], [{nlmsg_len=884, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_TUNNEL, ifi_index=if_nametoindex("tunl0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=10, nla_type=IFLA_IFNAME}, "tunl0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1480], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=8, nla_type=IFLA_ADDRESS}, 00:00:00:00], [{nla_len=8, nla_type=IFLA_BROADCAST}, 00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=116, nla_type=IFLA_LINKINFO}, [[{nla_len=9, nla_type=IFLA_INFO_KIND}, "ipip"], [{nla_len=100, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x08\x00\x02\x00\x00\x00\x00\x00\x08\x00\x03\x00\x00\x00\x00\x00\x05\x00\x04\x00\x00\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]], [{nlmsg_len=912, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_IPGRE, ifi_index=if_nametoindex("gre0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=9, nla_type=IFLA_IFNAME}, "gre0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1476], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=8, nla_type=IFLA_ADDRESS}, 00:00:00:00], [{nla_len=8, nla_type=IFLA_BROADCAST}, 00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=144, nla_type=IFLA_LINKINFO}, [[{nla_len=8, nla_type=IFLA_INFO_KIND}, "gre"], [{nla_len=132, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x06\x00\x02\x00\x00\x00\x00\x00\x06\x00\x03\x00\x00\x00\x00\x00\x08\x00\x04\x00\x00\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 3228
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=1592, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_ETHER, ifi_index=if_nametoindex("gretap0"), ifi_flags=IFF_BROADCAST|IFF_MULTICAST, ifi_change=0}, [[{nla_len=12, nla_type=IFLA_IFNAME}, "gretap0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1462], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 68], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00], [{nla_len=10, nla_type=IFLA_BROADCAST}, ff:ff:ff:ff:ff:ff], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=148, nla_type=IFLA_LINKINFO}, [[{nla_len=11, nla_type=IFLA_INFO_KIND}, "gretap"], [{nla_len=132, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x06\x00\x02\x00\x00\x00\x00\x00\x06\x00\x03\x00\x00\x00\x00\x00\x08\x00\x04\x00\x00\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]], [{nlmsg_len=1608, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_ETHER, ifi_index=if_nametoindex("erspan0"), ifi_flags=IFF_BROADCAST|IFF_MULTICAST, ifi_change=0}, [[{nla_len=12, nla_type=IFLA_IFNAME}, "erspan0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1450], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 68], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00], [{nla_len=10, nla_type=IFLA_BROADCAST}, ff:ff:ff:ff:ff:ff], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=164, nla_type=IFLA_LINKINFO}, [[{nla_len=11, nla_type=IFLA_INFO_KIND}, "erspan"], [{nla_len=148, nla_type=IFLA_INFO_DATA}, "\x05\x00\x16\x00\x01\x00\x00\x00\x08\x00\x15\x00\x00\x00\x00\x00\x08\x00\x01\x00\x00\x00\x00\x00\x06\x00\x02\x00\x00\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]], [{nlmsg_len=832, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_TUNNEL, ifi_index=if_nametoindex("ip_vti0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=12, nla_type=IFLA_IFNAME}, "ip_vti0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1480], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=8, nla_type=IFLA_ADDRESS}, 00:00:00:00], [{nla_len=8, nla_type=IFLA_BROADCAST}, 00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=64, nla_type=IFLA_LINKINFO}, [[{nla_len=8, nla_type=IFLA_INFO_KIND}, "vti"], [{nla_len=52, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x08\x00\x02\x00\x00\x00\x00\x00\x08\x00\x03\x00\x00\x00\x00\x00\x08\x00\x04\x00\x00\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 4032
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=1576, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_TUNNEL6, ifi_index=if_nametoindex("ip6_vti0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=13, nla_type=IFLA_IFNAME}, "ip6_vti0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1428], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 68], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 65495], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=20, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00:00], [{nla_len=20, nla_type=IFLA_BROADCAST}, 00:00:00:00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=92, nla_type=IFLA_LINKINFO}, [[{nla_len=9, nla_type=IFLA_INFO_KIND}, "vti6"], [{nla_len=76, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x14\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x05\x00"...]]], [{nla_len=20, nla_type=IFLA_PERM_ADDRESS}, 12:46:e1:a3:7d:cb:00], [{nla_len=8, nla_type=IFLA_LINK}, 0], ...]], [{nlmsg_len=1600, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_SIT, ifi_index=if_nametoindex("sit0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=9, nla_type=IFLA_IFNAME}, "sit0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1480], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 1280], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 65555], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=8, nla_type=IFLA_ADDRESS}, 00:00:00:00], [{nla_len=8, nla_type=IFLA_BROADCAST}, 00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=164, nla_type=IFLA_LINKINFO}, [[{nla_len=8, nla_type=IFLA_INFO_KIND}, "sit"], [{nla_len=152, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x08\x00\x02\x00\x00\x00\x00\x00\x08\x00\x03\x00\x00\x00\x00\x00\x05\x00\x04\x00\x40\x00\x00\x00"...]]], [{nla_len=8, nla_type=IFLA_LINK}, 0], [{nla_len=9, nla_type=IFLA_QDISC}, "noop"], ...]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 3176
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=1628, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_TUNNEL6, ifi_index=if_nametoindex("ip6tnl0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=12, nla_type=IFLA_IFNAME}, "ip6tnl0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1452], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 68], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 65535], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=20, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00:00], [{nla_len=20, nla_type=IFLA_BROADCAST}, 00:00:00:00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=148, nla_type=IFLA_LINKINFO}, [[{nla_len=11, nla_type=IFLA_INFO_KIND}, "ip6tnl"], [{nla_len=132, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x14\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x14\x00\x03\x00"...]]], [{nla_len=20, nla_type=IFLA_PERM_ADDRESS}, 5e:bb:6d:1f:3a:83:00], [{nla_len=8, nla_type=IFLA_LINK}, 0], ...]], [{nlmsg_len=1652, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_IP6GRE, ifi_index=if_nametoindex("ip6gre0"), ifi_flags=IFF_NOARP, ifi_change=0}, [[{nla_len=12, nla_type=IFLA_IFNAME}, "ip6gre0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 1000], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 2], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 1448], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 0], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 0], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 1], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 1], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 0], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 0], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=20, nla_type=IFLA_ADDRESS}, 00:00:00:00:00:00:00], [{nla_len=20, nla_type=IFLA_BROADCAST}, 00:00:00:00:00:00:00], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=0, tx_packets=0, rx_bytes=0, tx_bytes=0, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=172, nla_type=IFLA_LINKINFO}, [[{nla_len=11, nla_type=IFLA_INFO_KIND}, "ip6gre"], [{nla_len=156, nla_type=IFLA_INFO_DATA}, "\x08\x00\x01\x00\x00\x00\x00\x00\x06\x00\x02\x00\x00\x00\x00\x00\x06\x00\x03\x00\x00\x00\x00\x00\x08\x00\x04\x00\x00\x00\x00\x00"...]]], [{nla_len=20, nla_type=IFLA_PERM_ADDRESS}, da:45:4b:39:06:86:00], [{nla_len=8, nla_type=IFLA_LINK}, 0], ...]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 3280
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=1468, nlmsg_type=RTM_NEWLINK, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, {ifi_family=AF_UNSPEC, ifi_type=ARPHRD_ETHER, ifi_index=if_nametoindex("eth0"), ifi_flags=IFF_UP|IFF_BROADCAST|IFF_RUNNING|IFF_MULTICAST|IFF_LOWER_UP, ifi_change=0}, [[{nla_len=9, nla_type=IFLA_IFNAME}, "eth0"], [{nla_len=8, nla_type=IFLA_TXQLEN}, 0], [{nla_len=5, nla_type=IFLA_OPERSTATE}, 6], [{nla_len=5, nla_type=IFLA_LINKMODE}, 0], [{nla_len=8, nla_type=IFLA_MTU}, 65535], [{nla_len=8, nla_type=IFLA_MIN_MTU}, 68], [{nla_len=8, nla_type=IFLA_MAX_MTU}, 65535], [{nla_len=8, nla_type=IFLA_GROUP}, 0], [{nla_len=8, nla_type=IFLA_PROMISCUITY}, 0], [{nla_len=8, nla_type=IFLA_ALLMULTI}, 0], [{nla_len=8, nla_type=IFLA_NUM_TX_QUEUES}, 12], [{nla_len=8, nla_type=IFLA_GSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_GSO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=IFLA_GRO_MAX_SIZE}, 65536], [{nla_len=8, nla_type=0x3f /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=0x40 /* IFLA_??? */}, "\x00\x00\x01\x00"], [{nla_len=8, nla_type=IFLA_TSO_MAX_SIZE}, 524280], [{nla_len=8, nla_type=IFLA_TSO_MAX_SEGS}, 65535], [{nla_len=8, nla_type=IFLA_NUM_RX_QUEUES}, 12], [{nla_len=5, nla_type=IFLA_CARRIER}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_CHANGES}, 2], [{nla_len=8, nla_type=IFLA_CARRIER_UP_COUNT}, 1], [{nla_len=8, nla_type=IFLA_CARRIER_DOWN_COUNT}, 1], [{nla_len=5, nla_type=IFLA_PROTO_DOWN}, 0], [{nla_len=10, nla_type=IFLA_ADDRESS}, 02:42:ac:11:00:02], [{nla_len=10, nla_type=IFLA_BROADCAST}, ff:ff:ff:ff:ff:ff], [{nla_len=204, nla_type=IFLA_STATS64}, {rx_packets=385, tx_packets=332, rx_bytes=946129, tx_bytes=51126, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0, rx_otherhost_dropped=0}], [{nla_len=100, nla_type=IFLA_STATS}, {rx_packets=385, tx_packets=332, rx_bytes=946129, tx_bytes=51126, rx_errors=0, tx_errors=0, rx_dropped=0, tx_dropped=0, multicast=0, collisions=0, rx_length_errors=0, rx_over_errors=0, rx_crc_errors=0, rx_frame_errors=0, rx_fifo_errors=0, rx_missed_errors=0, tx_aborted_errors=0, tx_carrier_errors=0, tx_fifo_errors=0, tx_heartbeat_errors=0, tx_window_errors=0, rx_compressed=0, tx_compressed=0, rx_nohandler=0}], [{nla_len=12, nla_type=IFLA_XDP}, [{nla_len=5, nla_type=IFLA_XDP_ATTACHED}, XDP_ATTACHED_NONE]], [{nla_len=16, nla_type=IFLA_LINKINFO}, [{nla_len=9, nla_type=IFLA_INFO_KIND}, "veth"]], [{nla_len=8, nla_type=IFLA_LINK_NETNSID}, 0], [{nla_len=8, nla_type=IFLA_LINK}, 33], ...]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 1468
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699151, nlmsg_pid=97}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+97    sendto(17, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1734699152, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124376, tstamp=124376}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET, ifa_prefixlen=16, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("eth0")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.17.0.2")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.17.0.2")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.17.255.255")], [{nla_len=9, nla_type=IFA_LABEL}, "eth0"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124380, tstamp=124380}]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124376, tstamp=124376}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x01"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 244
+97    recvmsg(17, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+97    getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(0, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(0, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(0, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(0, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+97    getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+97    getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+106   socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC, NETLINK_ROUTE) = 19
+106   bind(19, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 0
+106   getsockname(19, {sa_family=AF_NETLINK, nl_pid=97, nl_groups=00000000}, [12]) = 0
+106   sendto(19, [{nlmsg_len=20, nlmsg_type=RTM_GETADDR, nlmsg_flags=NLM_F_REQUEST|NLM_F_DUMP, nlmsg_seq=1734699152, nlmsg_pid=0}, {ifa_family=AF_UNSPEC, ...}], 20, 0, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, 12) = 20
+106   recvmsg(19, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[[{nlmsg_len=76, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET, ifa_prefixlen=8, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("127.0.0.1")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("127.0.0.1")], [{nla_len=7, nla_type=IFA_LABEL}, "lo"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124376, tstamp=124376}]]], [{nlmsg_len=88, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET, ifa_prefixlen=16, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_UNIVERSE, ifa_index=if_nametoindex("eth0")}, [[{nla_len=8, nla_type=IFA_ADDRESS}, inet_addr("172.17.0.2")], [{nla_len=8, nla_type=IFA_LOCAL}, inet_addr("172.17.0.2")], [{nla_len=8, nla_type=IFA_BROADCAST}, inet_addr("172.17.255.255")], [{nla_len=9, nla_type=IFA_LABEL}, "eth0"], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124380, tstamp=124380}]]], [{nlmsg_len=80, nlmsg_type=RTM_NEWADDR, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, {ifa_family=AF_INET6, ifa_prefixlen=128, ifa_flags=IFA_F_PERMANENT, ifa_scope=RT_SCOPE_HOST, ifa_index=if_nametoindex("lo")}, [[{nla_len=20, nla_type=IFA_ADDRESS}, inet_pton(AF_INET6, "::1")], [{nla_len=20, nla_type=IFA_CACHEINFO}, {ifa_prefered=4294967295, ifa_valid=4294967295, cstamp=124376, tstamp=124376}], [{nla_len=8, nla_type=IFA_FLAGS}, IFA_F_PERMANENT], [{nla_len=5, nla_type=IFA_PROTO}, "\x01"]]]], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 244
+106   recvmsg(19, {msg_name={sa_family=AF_NETLINK, nl_pid=0, nl_groups=00000000}, msg_namelen=12, msg_iov=[{iov_base=[{nlmsg_len=20, nlmsg_type=NLMSG_DONE, nlmsg_flags=NLM_F_MULTI, nlmsg_seq=1734699152, nlmsg_pid=97}, 0], iov_len=4096}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 20
+106   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 19
+106   connect(19, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+106   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 19
+106   connect(19, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+106   socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 19
+106   setsockopt(19, SOL_IP, IP_RECVERR, [1], 4) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("192.168.65.7")}, 16) = 0
+106   sendto(19, "y\37\1\0\0\1\0\0\0\0\0\0\10registry\5npmjs\3org\0"..., 36, MSG_NOSIGNAL, NULL, 0) = 36
+106   recvfrom(19, "y\37\201\200\0\1\0\f\0\0\0\0\10registry\5npmjs\3org\0"..., 1024, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("192.168.65.7")}, [28 => 16]) = 444
+106   socket(AF_INET, SOCK_DGRAM|SOCK_CLOEXEC, IPPROTO_IP) = 19
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.1.35")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(49711), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.29.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(55527), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.2.35")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(57993), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.26.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(60373), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.24.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(48057), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.28.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(60538), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.3.35")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(45780), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.30.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(37844), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.31.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(33889), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.27.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(43499), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.0.35")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(50514), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+106   connect(19, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+106   connect(19, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("104.16.25.34")}, 16) = 0
+106   getsockname(19, {sa_family=AF_INET, sin_port=htons(35388), sin_addr=inet_addr("172.17.0.2")}, [28 => 16]) = 0
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 19
+97    setsockopt(19, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(19, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(19, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    getsockopt(19, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(19, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(19, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(19, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 20
+97    setsockopt(20, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(20, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(20, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 21
+97    setsockopt(21, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(21, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(21, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 22
+97    setsockopt(22, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(22, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(22, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 23
+97    setsockopt(23, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(23, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(23, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 24
+97    setsockopt(24, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(24, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(24, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 25
+97    setsockopt(25, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(25, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(25, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 26
+97    setsockopt(26, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(26, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(26, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 27
+97    setsockopt(27, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(27, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(27, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 28
+97    setsockopt(28, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(28, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(28, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 29
+97    setsockopt(29, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(29, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPIDLE, [60], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    connect(29, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("104.16.1.35")}, 16) = -1 EINPROGRESS (Operation now in progress)
+97    getsockopt(26, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(26, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(26, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(26, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(28, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(28, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(28, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(28, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(20, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(20, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(20, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(20, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(21, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(21, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(21, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(21, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(22, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(22, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(22, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(22, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(23, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(23, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(23, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(23, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(24, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(24, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(24, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(24, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(25, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(25, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(25, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(25, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(27, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(27, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(27, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(27, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+97    getsockopt(29, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+97    setsockopt(29, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+97    setsockopt(29, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPIDLE, [1], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPINTVL, [1], 4) = 0
+97    setsockopt(29, SOL_TCP, TCP_KEEPCNT, [10], 4) = 0
+104   +++ exited with 0 +++
+106   +++ exited with 0 +++
+105   +++ exited with 0 +++
+107   +++ exited with 0 +++
+99    +++ exited with 0 +++
+100   +++ exited with 0 +++
+101   +++ exited with 0 +++
+98    +++ exited with 0 +++
+102   +++ exited with 0 +++
+103   +++ exited with 0 +++
+97    +++ exited with 0 +++
+96    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=97, si_uid=0, si_status=0, si_utime=81 /* 0.81 s */, si_stime=47 /* 0.47 s */} ---
+96    +++ exited with 0 +++
+89    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=96, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+89    shutdown(26, SHUT_WR)             = 0
+89    shutdown(24, SHUT_WR)             = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [21, 22]) = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [23, 24]) = 0
+89    socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [25, 26]) = 0
+109   getsockname(0, {sa_family=AF_UNIX}, [128 => 2]) = 0
+109   getsockopt(0, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+109   getsockname(1, {sa_family=AF_UNIX}, [128 => 2]) = 0
+109   getsockopt(1, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+109   getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+109   getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+109   getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+109   getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+109   getsockname(2, {sa_family=AF_UNIX}, [128 => 2]) = 0
+109   getsockopt(2, SOL_SOCKET, SO_TYPE, [1], [4]) = 0
+109   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 18
+109   connect(18, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+109   socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 18
+109   connect(18, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+109   socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 18
+109   connect(18, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+109   socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 19
+109   connect(19, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+109   socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, IPPROTO_IP) = 20
+109   connect(20, {sa_family=AF_INET, sin_port=htons(1244), sin_addr=inet_addr("67.203.7.209")}, 16) = -1 EINPROGRESS (Operation now in progress)
+109   getsockopt(18, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+109   setsockopt(18, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+109   getsockopt(19, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+109   setsockopt(19, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+109   getsockopt(20, SOL_SOCKET, SO_ERROR, [0], [4]) = 0
+109   setsockopt(20, SOL_TCP, TCP_NODELAY, [1], 4) = 0
+109   shutdown(18, SHUT_WR)             = 0
+109   shutdown(19, SHUT_WR)             = 0
+109   socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [18, 19]) = 0
+109   socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [21, 22]) = 0
+109   socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [23, 24]) = 0
+109   shutdown(20, SHUT_WR)             = 0
+118   +++ exited with 1 +++
+117   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=118, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+117   +++ exited with 1 +++
+116   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=117, si_uid=0, si_status=1, si_utime=1 /* 0.01 s */, si_stime=1 /* 0.01 s */} ---
+116   +++ exited with 1 +++
+109   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=116, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+109   shutdown(23, SHUT_WR)             = 0
+109   shutdown(21, SHUT_WR)             = 0
+89    --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+109   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+108   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+89    --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+109   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+108   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+89    --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+109   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+108   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+89    --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+109   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+108   --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+89    --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+109   --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+108   --- SIGINT {si_signo=SIGINT, si_code=SI_KERNEL} ---
+109   --- SIGINT {si_signo=SIGINT, si_code=SI_TKILL, si_pid=109, si_uid=0} ---
+110   +++ killed by SIGINT +++
+114   +++ killed by SIGINT +++
+115   +++ killed by SIGINT +++
+113   +++ killed by SIGINT +++
+112   +++ killed by SIGINT +++
+89    --- SIGINT {si_signo=SIGINT, si_code=SI_TKILL, si_pid=89, si_uid=0} ---
+95    +++ killed by SIGINT +++
+94    +++ killed by SIGINT +++
+93    +++ killed by SIGINT +++
+92    +++ killed by SIGINT +++
+91    +++ killed by SIGINT +++
+111   +++ killed by SIGINT +++
+109   +++ killed by SIGINT +++
+108   --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_KILLED, si_pid=109, si_uid=0, si_status=SIGINT, si_utime=19 /* 0.19 s */, si_stime=6 /* 0.06 s */} ---
+90    +++ killed by SIGINT +++
+89    +++ killed by SIGINT +++
+108   --- SIGINT {si_signo=SIGINT, si_code=SI_TKILL, si_pid=108, si_uid=0} ---
+108   +++ killed by SIGINT +++
