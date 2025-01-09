@@ -27,10 +27,11 @@ The first IP seems to be used to fetch some sort of key and the second one actua
 - [~/.vscode](./payloads/.vscode)
 - [~/.npl](./payloads/.npl)
 
-Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there.
-![](processes.png?raw=true)
+That `.npl` payload is actually encoded in multiple rounds using base64 and in the end the script that is formed is at [npl-final.py](./payloads/npl-final.py). The [decode-recursive.py](./payloads/decode-recursive.py) is just an util script that was used to decode the base64 payload until it actually gets to the final script.
 
-The `.npl` file seems more cryptic as it's a base64 encoded file which after decoding seems to be an executabel binary but I couldn't gather also what it does exactly besides tracing the underlying processes calls.
+The vscode folder contents are downloaded from the decoded `.npl` script. Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there. Potentially it's the script that actually tries to gather and send information to the mentioned IP addresses.
+
+![](processes.png?raw=true)
 
 Regardless, after running the script with `strace -f -o trace.log node script.js` within the container I could detect on [trace.log](./trace.log) the IPs mentioned and the files that it tries to open and I believe which are sent to 67.203.7.209:1244
 
