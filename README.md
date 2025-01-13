@@ -3,13 +3,13 @@
 I've recently done a tech challenge which had a suspicious piece of code in it.
 Shortly after finding this I asked them about it and had my question removed and I was blocked by the dev that was managing it.
 It became clear that it was a scam and I had to go a bit deeper into what was happening and what they were trying to do.
-You can find the [script](./script.js) and run it through Docker (for safety) with:
+You can find the [script](./tech-vantage/script.js) and run it through Docker (for safety) with:
 ```
 $ docker build -t <IMAGE_NAME> .
 $ docker run --rm -it --name <CONTAINER_NAME> --cap-drop=ALL <IMAGE_NAME>
 ```
 
-I've also left how it was hidden on the file [here](./hidden-script.js) so you can also see how they usually do it.
+I've also left how it was hidden on the file [here](./tech-vantage/hidden-script.js) so you can also see how they usually do it.
 Luckily when I've opened this file the line simply wrapped which allowed me to see it with ease but looking through
 github you can see that the symbols are detected as well.
 
@@ -24,10 +24,10 @@ Along with the order of requests:
 
 The first IP seems to be used to fetch some sort of key and the second one actually downloads the actual malicious payload at the home directory and it does in a cunning way to try to avoid the target from noticing it:
 
-- [~/.vscode](./payloads/.vscode)
-- [~/.npl](./payloads/.npl)
+- [~/.vscode](./tech-vantage/payloads/.vscode)
+- [~/.npl](./tech-vantage/payloads/.npl)
 
-That `.npl` payload is actually encoded in multiple rounds using base64 and in the end the script that is formed is at [npl-final.py](./payloads/npl-final.py). The [decode-recursive.py](./payloads/decode-recursive.py) is just an util script that was used to decode the base64 payload until it actually gets to the final script.
+That `.npl` payload is actually encoded in multiple rounds using base64 and in the end the script that is formed is at [npl-final.py](./tech-vantage/payloads/npl-final.py). The [decode-recursive.py](./tech-vantage/payloads/decode-recursive.py) is just an util script that was used to decode the base64 payload until it actually gets to the final script.
 
 The vscode folder contents are downloaded from the decoded `.npl` script. Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there. Potentially it's the script that actually tries to gather and send information to the mentioned IP addresses.
 
