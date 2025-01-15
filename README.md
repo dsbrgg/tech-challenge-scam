@@ -32,7 +32,7 @@ The first IP seems to be used to fetch some sort of key and the second one actua
 - [~/.vscode](./tech-vantage/payloads/.vscode)
 - [~/.npl](./tech-vantage/payloads/.npl)
 
-That `.npl` payload is actually encoded in multiple rounds using base64 and in the end the script that is formed is at [npl-final.py](./tech-vantage/payloads/npl-final.py). The [decode-recursive.py](./tech-vantage/payloads/decode-recursive.py) is just an util script that was used to decode the base64 payload until it actually gets to the final script.
+That `.npl` payload is actually encoded in multiple rounds using base64 and in the end the script that is formed is at [npl-final.py](./tech-vantage/payloads/npl-final.py). The [decode-recursive.py](./decode-recursive.py) is just an util script that was used to decode the base64 payload until it actually gets to the final script.
 
 The vscode folder contents are downloaded from the decoded `.npl` script. Inside .vscode, there's another obfuscated script which seems to be the one that keeps running (there's a `setInterval`) there. Potentially it's the script that actually tries to gather and send information to the mentioned IP addresses.
 
@@ -79,4 +79,4 @@ I have the impression they might all get these scripts from the same location as
 - It's a python script which decompresses a string and base64 decodes it multiple times (50+)
 - The python script downloads the actual malware into another folder that would seem harmless but it's out of place (.sysinfo in Darwin arch, .vscode at home folder, etc...)
 
-Best of luck for this one though as it's script (if you use my [decode](./tech-vantage/payloads/decode-recursive.py) to test it out) was incorrectly encoded in a round and it won't reach the final script in the end.
+Good luck for this one though as it's script (if you use my [decoder](./decode-recursive.py) to test it out) was incorrectly encoded in a round and it won't reach the final script in the end.
